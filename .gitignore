@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.json
+*.html
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+*.egg-info/
+*.ipynb
