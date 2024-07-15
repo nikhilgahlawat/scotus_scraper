@@ -6,7 +6,6 @@ import re
 from datetime import datetime
 from scotus_scraper.config import JUSTIA_CASE_PAGES_DIR, SYLLABUS_TEXT, OPINIONS_TEXT, CASE_MEDIA, CASE_FILINGS
 
-
 def parse_data(soup):
   case = {
     'docket': None,
@@ -67,7 +66,6 @@ def parse_data(soup):
 
   return case
 
-
 def process_file(file_path):
   with open(file_path, 'r') as file:
     content = file.read()
@@ -75,12 +73,9 @@ def process_file(file_path):
   data = parse_data(soup)
   return data
 
-
 def write_json(data, filename):
   with open(filename, 'w') as json_file:
     json.dump(data, json_file, indent=2)
-
-
 
 def main():
   input_dir = JUSTIA_CASE_PAGES_DIR

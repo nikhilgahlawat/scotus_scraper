@@ -6,7 +6,6 @@ from concurrent.futures import ProcessPoolExecutor
 import itertools
 from scotus_scraper.config import CASELIST, JUSTIA_URL, JUSTIA_CASE_PAGES_DIR
 
-
 def get_page(url, output_dir):
   page = requests.get(url)
   soup = BeautifulSoup(page.content, 'html.parser')
@@ -35,7 +34,6 @@ def main():
 
   with ProcessPoolExecutor() as executor:
     results = list(itertools.starmap(get_page, args))
-
 
 if __name__ == "__main__":
   main()

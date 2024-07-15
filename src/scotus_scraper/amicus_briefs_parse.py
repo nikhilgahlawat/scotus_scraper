@@ -18,7 +18,6 @@ def download_pdf(url):
   response.raise_for_status()
   return BytesIO(response.content)
 
-
 def extract_text_from_pdf(pdf_file):
   full_text = []
 
@@ -34,7 +33,6 @@ def extract_text_from_pdf(pdf_file):
     return full_text
   except Exception as e:
     logging.error(f'Error processing {pdf_file}: {e}')
-
 
 def is_valid_pdf(file):
   try:
@@ -74,5 +72,4 @@ def main(input_file, output_file):
 if __name__ == "__main__":
   input_file = AMICUS_BRIEFS_LIST
   output_file = AMICUS_BRIEFS_TEXT
-  
   main(input_file, output_file)

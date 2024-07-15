@@ -2,7 +2,6 @@ import json
 import re
 from scotus_scraper.config import JUSTIA_CASE_PAGES_PARSED, AMICUS_BRIEFS_LIST
 
-
 def contains_amicus(item):
   pattern = r'^amicus|^amici|^brief'
   return bool(re.search(pattern, item.lower()))
@@ -33,5 +32,4 @@ def main(input_file, output_file):
 if __name__ == "__main__":
   input_file = JUSTIA_CASE_PAGES_PARSED
   output_file = AMICUS_BRIEFS_LIST
-  
   main(input_file, output_file)

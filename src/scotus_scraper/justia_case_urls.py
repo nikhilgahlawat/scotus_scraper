@@ -33,7 +33,6 @@ def process_page(url):
 
   return caselist
 
-
 def main():
   url_base = JUSTIA_YEAR_URL
   start_year = START_YEAR
@@ -57,7 +56,6 @@ def main():
     json.dump(caselist, json_file, indent=2)
 
   print(f'Data saved to {output_file}')
-
 
 if __name__ == "__main__":
   main()
