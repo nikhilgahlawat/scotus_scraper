@@ -5,7 +5,7 @@ Data scraped from [Justia](https://supreme.justia.com/), [Oyez](https://www.oyez
 
 A little more background on the idea for the project [here](https://www.nikhilgahlawat.com/projects/scotus-scraper/).
 
-## Setup
+# Setup
 
 1. Clone the repository:
   ```sh
@@ -29,7 +29,7 @@ A little more background on the idea for the project [here](https://www.nikhilga
   pip install -e .
   ```
 
-## Running Scripts
+# Running Scripts
 
 To run the entire flow:
   ```sh
@@ -42,7 +42,7 @@ Hoping to add text data from briefs as well.
 
 By default, the project scrapes data from 2020 to 2024. To adjust this window, update the `START_YEAR` and `END_YEAR` fields in [`config.py`](https://github.com/nikhilgahlawat/scotus_scraper/blob/main/src/scotus_scraper/config.py)
 
-## Other Resources
+# Other Resources
 Here are some other useful resources I found while researching this project:
 - [Supreme Court Database](http://scdb.wustl.edu/) from Washington University Law
  - [Caselaw Access Project](https://case.law/) from Harvard Law School
