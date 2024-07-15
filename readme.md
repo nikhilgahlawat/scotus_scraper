@@ -1,5 +1,5 @@
 # About
-A project to scrape opinions, briefs, and other data from the United States Supreme Court.
+A project to scrape opinions, briefs, and other documents from the United States Supreme Court and make them available in machine-readable datasets.
 
 Data scraped from [Justia](https://supreme.justia.com/), [Oyez](https://www.oyez.org/), and the [US Supreme Court](https://www.supremecourt.gov/).
 
