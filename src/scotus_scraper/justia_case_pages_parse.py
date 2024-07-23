@@ -83,6 +83,7 @@ def main():
   opinions_file = OPINIONS_TEXT
   media_file = CASE_MEDIA
   filings_file = CASE_FILINGS
+  opinion_label_pattern = r'^(.*?)(?: \((.*?)\))?$'
 
   files = [os.path.join(input_dir, file) for file in os.listdir(input_dir) if file.endswith('.html')]
 
@@ -96,9 +97,17 @@ def main():
   for case in cases:
     if case['opinions']:
       for label, text in zip(case['opinion_labels'], case['opinions']):
+
+        match = re.match(opinion_label_pattern, label)
+        if match:
+          opinion_type = match.group(1)
+          author = match.group(2) if match.group(2) else None
+
         opinions.append({
           'docket': case['docket'],
-          'label': label,
+          # 'label': label,
+          'type': opinion_type,
+          'author': author,
           'text': text
           })
   write_json(opinions, opinions_file)
