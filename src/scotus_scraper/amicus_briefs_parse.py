@@ -73,3 +73,4 @@ if __name__ == "__main__":
   input_file = AMICUS_BRIEFS_LIST
   output_file = AMICUS_BRIEFS_TEXT
   main(input_file, output_file)
+

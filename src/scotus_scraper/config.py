@@ -21,4 +21,3 @@ JUSTIA_YEAR_URL = JUSTIA_URL + '/cases/federal/us/year/'
 
 START_YEAR = 2020
 END_YEAR = 2024
-

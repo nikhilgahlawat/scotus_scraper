@@ -33,3 +33,4 @@ if __name__ == "__main__":
   input_file = JUSTIA_CASE_PAGES_PARSED
   output_file = AMICUS_BRIEFS_LIST
   main(input_file, output_file)
+
